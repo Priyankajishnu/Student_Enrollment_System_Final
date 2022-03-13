@@ -12,7 +12,7 @@ app.use(cors());
 
 const port = process.env.PORT || 5000
 
-app.use(express.static(path.resolve(__dirname,"/client/build")))
+app.use(express.static(path.resolve(__dirname,"./client/build")))
 
 // CORS Policy
 app.use((req,res,next)=>{
@@ -33,7 +33,7 @@ mongoose.connect("mongodb+srv://priyanka:priyanka@cluster0.rutr8.mongodb.net/fin
 
 //add this code before app.listen
 app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"/client/build", "index.html"));
+    res.sendFile(path.resolve(__dirname,"./client/build", "index.html"));
 });
 
 //Port 
