@@ -33,7 +33,7 @@ mongoose.connect("mongodb+srv://priyanka:priyanka@cluster0.rutr8.mongodb.net/fin
 
 //add this code before app.listen
 app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"./build", "index.html"))
+    res.sendFile(path.resolve(__dirname,"./build", "index.html"));
 });
 
 //Port 
