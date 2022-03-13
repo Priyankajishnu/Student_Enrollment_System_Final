@@ -88,12 +88,12 @@ function Studentenroll(props) {
                             {/* <input className='studinp' type ="text" name="course" placeholder="Course" required=""value={formValues.course} onChange={handleChange} /> */}
                             <select style={{marginLeft:-100,height:40,borderRadius:5}} name="course" value={formValues.course} onChange={handleChange} className="myform">
                                 <option value = "" >Select your Course</option>
-                                <option value = "FULL STACK DEVELOPMENT(MERN)" >Full stack development</option>
-                                <option value = "FULL STACK DEVELOPMENT(MEAN)" >Full stack development</option>
-                                <option value = "DATA SCIENCE AND ANALYTICS">Data science and analytics</option>
-                                <option value = "ROBOTIC PROCESS AUTOMATION">Robotic process automation</option>
-                                <option value = "CYBER SECURITY ANALYST">Cyber security analyst</option>
-                                <option value = "DIGITAL MARKETING">Digital marketing</option>
+                                <option value = "FULL STACK DEVELOPMENT(MERN)" >FULL STACK DEVELOPMENT(MERN)</option>
+                                <option value = "FULL STACK DEVELOPMENT(MEAN)" >FULL STACK DEVELOPMENT(MEAN)</option>
+                                <option value = "DATA SCIENCE AND ANALYTICS">DATA SCIENCE AND ANALYTICS</option>
+                                <option value = "ROBOTIC PROCESS AUTOMATION">ROBOTIC PROCESS AUTOMATION</option>
+                                <option value = "CYBER SECURITY ANALYST">CYBER SECURITY ANALYS</option>
+                                <option value = "DIGITAL MARKETING">DIGITAL MARKETING</option>
                             </select>
                             <p className='error'>{formErrorValues.course}</p>
 
