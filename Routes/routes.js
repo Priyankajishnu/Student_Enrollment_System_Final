@@ -50,7 +50,7 @@ router.get('/api/employee', async(req,res)=>{
 });
 
 //Get single employee by id
-router.get('/api/employee/:_id',(req,res)=>{ 
+router.get('/api/employee/:id',(req,res)=>{ 
 
     try{
         const id=req.params.id;

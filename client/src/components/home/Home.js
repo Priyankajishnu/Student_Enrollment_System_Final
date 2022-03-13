@@ -5,11 +5,14 @@ import pic1 from '../../assets/mern.jpg';
 import pic2 from '../../assets/mean.jpg';
 import pic3 from '../../assets/digital.png';
 import Header from '../header/Header';
+import { useNavigate } from "react-router-dom";
+import { Navigate } from 'react-router';
 
 const Home =()=> {
 
+  let navigate = useNavigate();
   const click=()=>{
-    alert("Login to view our courses!!");
+    navigate('/courses');
   }
 
   return(

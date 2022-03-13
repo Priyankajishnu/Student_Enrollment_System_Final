@@ -3,6 +3,7 @@ import Footer from '../footer/Footer';
 import './Employenroll.css';
 import validation from './validation_1';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 import Header from '../header/Header';
 
 
@@ -12,6 +13,8 @@ function Employenroll(props) {
     const[formErrorValues, setFormErrorValues] = useState({});
 
     const [isSubmit, setIsSubmit] = useState(false);
+
+    let navigate = useNavigate();
 
     const handleChange = (event) => {
         const {name,value} = event.target;
@@ -30,6 +33,7 @@ function Employenroll(props) {
     useEffect(()=>{
         if(Object.keys(formErrorValues).length===0 && isSubmit){
             alert("ENROLLED SUCCESSFULLY");
+            navigate('/employeelogin');
         }
     
     },[formErrorValues]);

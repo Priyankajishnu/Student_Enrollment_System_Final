@@ -40,6 +40,7 @@ const EmpApprove = () => {
             )
     
   }
+  
   return (
     <div>
       <AdminNav />

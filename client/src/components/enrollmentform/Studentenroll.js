@@ -3,6 +3,7 @@ import Footer from '../footer/Footer';
 import './Studentenroll.css';
 import validation from './Validation';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 import Header from '../header/Header';
 
 function Studentenroll(props) {
@@ -11,6 +12,8 @@ function Studentenroll(props) {
     const[formErrorValues, setFormErrorValues] = useState({});
 
     const [isSubmit, setIsSubmit] = useState(false);
+
+    let navigate = useNavigate();
 
     const handleChange = (event) => {
         const {name,value} = event.target;
@@ -27,6 +30,7 @@ function Studentenroll(props) {
     useEffect(()=>{
         if(Object.keys(formErrorValues).length===0 && isSubmit){
             alert("ENROLLED SUCCESSFULLY");
+            navigate('/studentlogin');
         }
     },[formErrorValues]);
 
