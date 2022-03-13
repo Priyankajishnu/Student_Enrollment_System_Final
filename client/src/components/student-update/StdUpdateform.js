@@ -37,13 +37,13 @@ function StdUpdateform(props) {
   },[])
 
   const loadStudData=async()=>{
-      const response=await axios.get(`http://localhost:5000/routes/api/students/${id}`)
+      const response=await axios.get(`/routes/api/students/${id}`)
       setStudentEdit(response.data);
   }
 
   //edit student data
   const editData=async()=>{
-      await axios.post(`http://localhost:5000/routes/api/edit-stud/${id}`, studentEdit)
+      await axios.post(`/routes/api/edit-stud/${id}`, studentEdit)
       .then((res)=>{
           alert ("successfully updated")
           navigate('../students',{replace:true})

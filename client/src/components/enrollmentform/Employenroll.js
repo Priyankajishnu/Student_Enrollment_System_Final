@@ -22,7 +22,7 @@ function Employenroll(props) {
        event.preventDefault(); 
         setFormErrorValues(validation(formValues));
         setIsSubmit(true);
-        const response = await axios.post("http://localhost:5000/auth/employeeregister",{data:formValues});
+        const response = await axios.post("/auth/employeeregister",{data:formValues});
         console.log(response.data);
         
     }

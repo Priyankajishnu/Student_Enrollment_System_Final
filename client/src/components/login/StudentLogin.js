@@ -41,7 +41,7 @@ const StudentLogin=(props)=>{
   };
   
   const fetchLogin=async()=>{
-    await axios.post("http://localhost:5000/auth/studentlogin",{data:userData})
+    await axios.post("/auth/studentlogin",{data:userData})
     .then(
       response=>{    
         if(response.data.token) Cookies.set('studentkey',response.data.token);      

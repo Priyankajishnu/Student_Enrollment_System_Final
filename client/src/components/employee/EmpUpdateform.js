@@ -22,12 +22,12 @@ function EmpUpdateform(props) {
     },[])
 
     const loadEmpData=async()=>{
-        const response=await axios.get(`http://localhost:5000/routes/api/employee/${id}`)
+        const response=await axios.get(`/routes/api/employee/${id}`)
         setemployeeEdit(response.data);
     }
 
     const editData=async()=>{
-        await axios.post(`http://localhost:5000/routes/api/edit-emp/${id}`, employeeEdit)
+        await axios.post(`/routes/api/edit-emp/${id}`, employeeEdit)
         .then((res)=>{
             alert ("successfully updated")
             navigate('../emp-update',{replace:true})

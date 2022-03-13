@@ -18,7 +18,7 @@ function EmployeeUpdate() {
   },[])
 
   const fetchapi=async()=>{
-      const response=await axios.get('http://localhost:5000/routes/api/employee')
+      const response=await axios.get('/routes/api/employee')
       console.log(response.data);
       setEmployee(response.data)    
         
@@ -26,7 +26,7 @@ function EmployeeUpdate() {
 
   function deleteEmpData(id){
     console.log(id)
-    axios.delete(`http://localhost:5000/routes/api/delete-emp/${id}`)
+    axios.delete(`/routes/api/delete-emp/${id}`)
     .then((res)=>{
       console.log(res.data)
       alert("Successfully deleted")

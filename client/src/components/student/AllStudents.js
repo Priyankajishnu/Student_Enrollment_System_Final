@@ -17,14 +17,14 @@ const AllStudents = () => {
   },[]);
 
   const fetchapi=async()=>{      
-    const response=await axios.get('http://localhost:5000/routes/api/students')
+    const response=await axios.get('/routes/api/students')
     console.log(response.data);
     setStudents(response.data)
   }
 
   function deleteStudData(id){
     console.log(id)
-    axios.delete(`http://localhost:5000/routes/api/delete-stud/${id}`)
+    axios.delete(`/routes/api/delete-stud/${id}`)
     .then((res)=>{
       console.log(res.data)
       alert("Successfully deleted")

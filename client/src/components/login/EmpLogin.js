@@ -39,7 +39,7 @@ const EmpLogin = (props) => {
   };
   
   const fetchLogin=async()=>{
-    await axios.post("http://localhost:5000/auth/employeelogin",{data:userData})
+    await axios.post("/auth/employeelogin",{data:userData})
     .then(
       response=>{    
         if(response.data.token) Cookies.set('employeekey',response.data.token);      

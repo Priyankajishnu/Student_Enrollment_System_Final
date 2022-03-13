@@ -32,7 +32,7 @@ function AdminLogin(props) {
 		event.preventDefault();
 		setFormErrorValues(adminvalidation(formValues));
 	    setIsSubmit(true) ;
-        await axios.post("http://localhost:5000/auth/adminlogin",{data:formValues})
+        await axios.post("/auth/adminlogin",{data:formValues})
         .then(
             response=>{    
                 if(response.data.accessToken) Cookies.set(process.env.SECRET_KEY,response.data.accessToken);      

@@ -21,7 +21,7 @@ function Studentenroll(props) {
         event.preventDefault(); 
         setFormErrorValues(validation(formValues));
         setIsSubmit(true);
-        const response = await axios.post("http://localhost:5000/auth/studentregister",{data:formValues});
+        const response = await axios.post("/auth/studentregister",{data:formValues});
         console.log(response.data);
     }
     useEffect(()=>{

@@ -18,7 +18,7 @@ function StudentUpdate() {
   },[]);
 
   const fetchapi=async()=>{      
-      const response=await axios.get('http://localhost:5000/routes/api/students')
+      const response=await axios.get('/routes/api/students')
       console.log(response.data);
       setStudUpdate(response.data)
   }

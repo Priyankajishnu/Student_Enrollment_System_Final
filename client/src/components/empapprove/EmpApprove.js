@@ -21,7 +21,7 @@ const EmpApprove = () => {
 
   const fetchapi=async()=>{
       //const response = await fetch('http://localhost:5000/api/employee')
-      const response=await axios.get('http://localhost:5000/api/employee')
+      const response=await axios.get('/api/employee')
       console.log(response.data);
       setEmployee(response.data)    
         
@@ -30,7 +30,7 @@ const EmpApprove = () => {
   function approveEmpData(event){
      
      console.log(event.target.getAttribute("name"))
-      axios.approve(`http://localhost:5000/main/api/approveemploye`, { id: event.target.getAttribute("name") })
+      axios.approve(`/main/api/approveemploye`, { id: event.target.getAttribute("name") })
             .then((res) => {
                 alert("Successfully Approved");
 
